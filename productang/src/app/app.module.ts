@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import {FormsModule} from '@angular/forms';
+//import {StorageServiceModule} from 'angular-webstorage-service';
 import {HttpClientModule} from '@angular/common/http';
 import { DeleteComponent } from './delete/delete.component';
 import { ViewComponent } from './view/view.component';
@@ -32,7 +33,7 @@ const approutes:Routes=[{path:"new",component:AddComponent},{path:"edit",compone
     DataComponent
   ],
   imports: [
-    BrowserModule,FormsModule,HttpClientModule,
+    BrowserModule,FormsModule,HttpClientModule,//StorageServiceModule,
     AppRoutingModule,RouterModule.forRoot(approutes)
   ],
   providers: [CalcService,SampleService],

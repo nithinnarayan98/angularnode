@@ -1,1 +1,21 @@
 <p>view works!</p>
+<input type="button" value="show" (click)="show()">
+<table>
+    <tr><th>product id</th>
+    <th>product name</th>
+<th>price</th></tr>
+    <tr *ngFor="let i of result">
+<td> {{i.productId}} </td>
+<td> {{i.productName}} </td>
+<td> {{i.productPrice}} </td>
+<td> <input type="button" name="" id="" value="edit" (click)="edit(i.productId)"> </td>
+    </tr>
+</table>
+
+
+<div *ngIf="view">
+        <h3>update</h3>
+      product id <input type="text">
+     new product name <input type="text">
+   new product price <input type="text">
+</div>
